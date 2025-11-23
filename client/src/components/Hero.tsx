@@ -156,11 +156,6 @@ export function Hero() {
                 <SiKalilinux className="w-7 h-7 text-red-600" />
               </div>
               
-              {/* Left Middle - Python */}
-              <div className="absolute left-1/2 -left-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-250 hover:shadow-blue-500/50">
-                <SiPython className="w-7 h-7 text-blue-500" />
-              </div>
-              
               {/* Left Bottom - Raspberry Pi */}
               <div className="absolute bottom-1/4 -left-8 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350 hover:shadow-red-500/50">
                 <div className="w-7 h-7 text-red-500 flex items-center justify-center">
