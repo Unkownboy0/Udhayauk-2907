@@ -103,6 +103,12 @@ export function Hero() {
 
             <div className="flex gap-4">
               <Button
+                className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg"
+                data-testid="button-roadmaps"
+              >
+                Roadmaps
+              </Button>
+              <Button
                 variant="outline"
                 className="rounded-full px-8 py-6 text-lg"
                 onClick={() => {
