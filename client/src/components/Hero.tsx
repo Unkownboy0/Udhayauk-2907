@@ -49,7 +49,7 @@ export function Hero() {
               <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3 text-center lg:text-left">Follow me</p>
               <div className="flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2 md:gap-3 flex-wrap">
                 <a
-                  href="https://medium.com"
+                  href="https://medium.com/geetorus"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
@@ -58,16 +58,16 @@ export function Hero() {
                   <SiMedium className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
-                  href="https://x.com"
+                  href="https://github.com/Unkownboy0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
-                  data-testid="link-twitter"
+                  data-testid="link-github"
                 >
-                  <FaXTwitter className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
+                  <SiGit className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/_geetorus_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
@@ -76,22 +76,13 @@ export function Hero() {
                   <SiInstagram className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/udhaya-uk-27a2402b8/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
                   data-testid="link-linkedin"
                 >
                   <SiLinkedin className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
-                </a>
-                <a
-                  href="https://youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
-                  data-testid="link-youtube"
-                >
-                  <SiYoutube className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
               </div>
             </div>
