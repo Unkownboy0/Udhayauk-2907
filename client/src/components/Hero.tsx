@@ -23,7 +23,7 @@ export function Hero() {
             <div className="flex items-center gap-2">
               <HandIcon className="w-8 h-8 text-cyan" />
               <span className="text-lg text-muted-foreground">
-                Hi, I'm <span className="text-cyan font-semibold">Karthikeyan V</span>
+                Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
               </span>
             </div>
 
@@ -58,7 +58,7 @@ export function Hero() {
               <p className="text-sm text-muted-foreground mb-3">Follow me</p>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://medium.com/@karthithehacker"
+                  href="https://medium.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
@@ -67,7 +67,7 @@ export function Hero() {
                   <SiMedium className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://x.com/karthithehacker"
+                  href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
@@ -76,7 +76,7 @@ export function Hero() {
                   <FaXTwitter className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://instagram.com/karthi_the_hacker"
+                  href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
@@ -85,7 +85,7 @@ export function Hero() {
                   <SiInstagram className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/karthikeyan--v/"
+                  href="https://www.linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
@@ -94,7 +94,7 @@ export function Hero() {
                   <SiLinkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://youtube.com/@karthi_the_hacker"
+                  href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
@@ -118,7 +118,7 @@ export function Hero() {
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/api/resume';
-                  link.download = 'Karthikeyan_V_Resume.pdf';
+                  link.download = 'Udhayakumar_Resume.pdf';
                   link.click();
                 }}
                 data-testid="button-download-resume"
@@ -135,7 +135,7 @@ export function Hero() {
               <div className="relative w-96 h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
                 <img
                   src={profileImage}
-                  alt="Karthikeyan V Profile"
+                  alt="Udhayakumar Profile"
                   className="w-full h-full object-cover"
                 />
               </div>

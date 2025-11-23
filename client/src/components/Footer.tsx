@@ -15,7 +15,7 @@ export function Footer() {
 
           <div className="flex items-center justify-center gap-6">
             <a
-              href="https://medium.com/@karthithehacker"
+              href="https://medium.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -24,7 +24,7 @@ export function Footer() {
               <SiMedium className="w-6 h-6" />
             </a>
             <a
-              href="https://x.com/karthithehacker"
+              href="https://x.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -33,7 +33,7 @@ export function Footer() {
               <FaXTwitter className="w-6 h-6" />
             </a>
             <a
-              href="https://instagram.com/karthi_the_hacker"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -42,7 +42,7 @@ export function Footer() {
               <SiInstagram className="w-6 h-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/karthikeyan--v/"
+              href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -51,7 +51,7 @@ export function Footer() {
               <SiLinkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://youtube.com/@karthi_the_hacker"
+              href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -63,7 +63,7 @@ export function Footer() {
 
           <div className="pt-6 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Karthikeyan V - Cybersecurity Researcher. All rights reserved.
+              © {new Date().getFullYear()} Udhayakumar - Cybersecurity Researcher. All rights reserved.
             </p>
           </div>
         </div>

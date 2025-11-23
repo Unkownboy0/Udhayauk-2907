@@ -98,11 +98,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
     try {
-      const resumeContent = `KARTHIKEYAN V
+      const resumeContent = `UDHAYAKUMAR
 Cybersecurity Researcher & Investigator
 Chennai, India
 Phone: +91-827-091-3635
-Email: contact@karthithehacker.com
+Email: contact@udhayakumar.com
 
 PROFESSIONAL SUMMARY
 CEO of Cappricio Securities, specializing in cybersecurity research and penetration testing.
@@ -149,15 +149,15 @@ LANGUAGES
 - Tamil (Native)
 
 FOLLOW ME
-GitHub: github.com/karthithehacker
-Twitter: @karthithehacker
-LinkedIn: linkedin.com/in/karthikeyan--v/
-Medium: medium.com/@karthithehacker
-YouTube: youtube.com/@karthi_the_hacker
-Instagram: instagram.com/karthi_the_hacker`;
+GitHub: github.com/udhayakumar
+Twitter: @udhayakumar
+LinkedIn: linkedin.com/in/udhayakumar/
+Medium: medium.com/@udhayakumar
+YouTube: youtube.com/@udhayakumar
+Instagram: instagram.com/udhayakumar`;
       
       res.setHeader("Content-Type", "text/plain");
-      res.setHeader("Content-Disposition", "attachment; filename=Karthikeyan_V_Resume.txt");
+      res.setHeader("Content-Disposition", "attachment; filename=Udhayakumar_Resume.txt");
       res.send(resumeContent);
     } catch (error) {
       res.status(500).json({ error: "Failed to download resume" });
