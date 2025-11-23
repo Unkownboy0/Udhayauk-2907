@@ -28,11 +28,9 @@ export function Hero() {
 
             <div className="relative inline-block">
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-tight">
-                Cybersecurity
+                Cybersecurity Researcher & Threat Investigator
                 <br />
-                Researcher and
-                <br />
-                Investigator
+                Ethical Hacker & Security Analyst
               </h1>
               {/* Animated underline */}
               <svg
