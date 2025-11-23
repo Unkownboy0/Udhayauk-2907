@@ -40,37 +40,5 @@ export function Courses() {
     );
   }
 
-  return (
-    <section id="courses" className="py-24 bg-background" data-testid="section-courses">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold">Courses</h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {courses.map((course) => (
-            <a
-              key={course.id}
-              href={course.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-              data-testid={`card-course-${course.id}`}
-            >
-              <Card className="overflow-hidden hover:scale-[1.02] transition-all duration-300 border-card-border hover-elevate">
-                <div className="aspect-video relative overflow-hidden">
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                </div>
-              </Card>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }
