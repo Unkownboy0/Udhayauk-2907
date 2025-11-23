@@ -132,7 +132,7 @@ export function Hero() {
           <div className="relative flex justify-center items-center animate-in fade-in slide-in-from-right duration-700 delay-300">
             <div className="relative">
               {/* Profile Image */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
+              <div className="relative w-96 h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
                 <img
                   src={profileImage}
                   alt="Karthikeyan V Profile"
