@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import img1 from "@assets/WhatsApp Image 2025-11-23 at 09.01.52_8dd2ad07_1763919092167.jpg";
 import img2 from "@assets/WhatsApp Image 2025-11-23 at 09.01.50_677e26e3_1763919092168.jpg";
 import img3 from "@assets/WhatsApp Image 2025-11-23 at 09.01.51_658a1992_1763919092168.jpg";
@@ -21,34 +21,30 @@ const achievements = [
 
 export function Achievements() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    let animationFrameId: number;
-    let currentScroll = 0;
+    let scrollAmount = 0;
+    const scrollSpeed = 2; // pixels per frame
 
     const autoScroll = () => {
-      const maxScroll = container.scrollWidth - container.clientWidth;
+      const totalWidth = container.scrollWidth / 2; // Half because we duplicate content
       
-      // Auto-scroll left to right
-      currentScroll += 1;
+      scrollAmount += scrollSpeed;
       
-      // Loop back to start
-      if (currentScroll > maxScroll) {
-        currentScroll = 0;
+      // Reset scroll when reaching halfway (seamless loop)
+      if (scrollAmount >= totalWidth) {
+        scrollAmount = 0;
       }
 
-      container.scrollLeft = currentScroll;
-      setScrollPosition(currentScroll);
-      animationFrameId = requestAnimationFrame(autoScroll);
+      container.scrollLeft = scrollAmount;
     };
 
-    animationFrameId = requestAnimationFrame(autoScroll);
+    const intervalId = setInterval(autoScroll, 30); // 30ms for smooth scrolling
 
-    return () => cancelAnimationFrame(animationFrameId);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -59,13 +55,24 @@ export function Achievements() {
           <div className="w-20 sm:w-32 h-1 bg-cyan mx-auto mt-4" />
         </div>
 
-        <div className="relative">
+        <div className="relative overflow-hidden rounded-lg">
+          <style>{`
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+            .scrollbar-hide {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+          `}</style>
+          
           <div
             ref={scrollContainerRef}
-            className="overflow-x-auto scrollbar-hide flex gap-4 sm:gap-6 scroll-smooth"
-            style={{ scrollBehavior: "smooth" }}
+            className="overflow-x-auto scrollbar-hide flex gap-4 sm:gap-6"
+            style={{ scrollBehavior: "auto" }}
             data-testid="carousel-achievements"
           >
+            {/* First set of images */}
             {achievements.map((image, index) => (
               <div
                 key={index}
@@ -80,11 +87,27 @@ export function Achievements() {
                 />
               </div>
             ))}
+            
+            {/* Duplicate set for seamless loop */}
+            {achievements.map((image, index) => (
+              <div
+                key={`dup-${index}`}
+                className="flex-shrink-0 w-64 sm:w-72 md:w-80 h-48 sm:h-56 rounded-lg overflow-hidden bg-card border border-border/50 transition-all duration-300 transform hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/30 cursor-pointer group"
+                data-testid={`achievement-card-dup-${index}`}
+              >
+                <img
+                  src={image}
+                  alt={`Achievement ${index + 1}`}
+                  className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
 
           {/* Gradient fade effects */}
-          <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-background/80 to-transparent pointer-events-none rounded-l-lg" />
-          <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-background/80 to-transparent pointer-events-none rounded-r-lg" />
+          <div className="absolute top-0 left-0 w-12 h-full bg-gradient-to-r from-background to-transparent pointer-events-none" />
+          <div className="absolute top-0 right-0 w-12 h-full bg-gradient-to-l from-background to-transparent pointer-events-none" />
         </div>
 
         <p className="text-center text-xs sm:text-sm text-muted-foreground mt-8">
