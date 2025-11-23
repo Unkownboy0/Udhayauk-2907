@@ -3,7 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export function Footer() {
   return (
-    <footer className="bg-black py-12 border-t border-border" data-testid="footer">
+    <footer className="bg-background py-12 border-t border-border" data-testid="footer">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center space-y-6">
           <div>
