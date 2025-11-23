@@ -15,26 +15,26 @@ export function Hero() {
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-24 lg:py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-32 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center min-h-screen lg:min-h-auto">
           {/* Left Column - Text */}
-          <div className="w-full lg:w-1/2 h-full flex flex-col justify-center lg:items-start items-center animate-in fade-in slide-in-from-left duration-700">
-            <div className="flex items-center gap-3 sm:gap-4 max-lg:justify-center mb-4 sm:mb-6">
-              <HandIcon className="w-7 sm:w-9 h-7 sm:h-9 text-cyan flex-shrink-0 hover:scale-110 transition-all duration-500" />
-              <p className="text-xl sm:text-2xl lg:text-3xl font-bold">
+          <div className="flex flex-col justify-center items-center lg:items-start lg:pr-6 animate-in fade-in slide-in-from-left duration-700">
+            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-6 w-full">
+              <HandIcon className="w-6 sm:w-7 md:w-8 lg:w-9 h-6 sm:h-7 md:h-8 lg:h-9 text-cyan flex-shrink-0 hover:scale-110 transition-all duration-500" />
+              <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-center lg:text-left">
                 Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
               </p>
             </div>
 
-            <div className="relative w-full max-lg:text-center mb-4 sm:mb-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
+            <div className="relative w-full text-center lg:text-left mb-3 sm:mb-4 md:mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-snug sm:leading-tight break-words">
                 Cybersecurity Researcher & Threat Investigator
-                <br />
+                <br className="hidden sm:inline" />
                 Ethical Hacker & Security Analyst
               </h1>
               {/* Animated underline */}
               <svg
-                className="absolute -bottom-1 sm:-bottom-2 left-0 lg:left-auto lg:right-0 w-32 sm:w-40 h-6 sm:h-8"
+                className="absolute -bottom-1 sm:-bottom-2 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-24 sm:w-28 md:w-32 lg:w-40 h-5 sm:h-6 md:h-7 lg:h-8"
                 viewBox="0 0 375 34"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,63 +46,63 @@ export function Hero() {
               </svg>
             </div>
 
-            <p className="text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl text-muted-foreground max-lg:text-center mb-4 sm:mb-6">CEO & Founder of Geetorus Cybersecurity in Erode, India. I specialize in ethical hacking, securing web and mobile platforms, developing security tools, and providing cyber awareness through workshops and seminars. My focus is to find vulnerabilities, prevent attacks, and build a safer digital pace.</p>
+            <p className="text-xs sm:text-sm md:text-base leading-relaxed text-muted-foreground text-center lg:text-left mb-3 sm:mb-4 md:mb-6 max-w-full lg:max-w-2xl">CEO & Founder of Geetorus Cybersecurity in Erode, India. I specialize in ethical hacking, securing web and mobile platforms, developing security tools, and providing cyber awareness through workshops and seminars. My focus is to find vulnerabilities, prevent attacks, and build a safer digital pace.</p>
 
             <div className="w-full">
-              <p className="text-xs sm:text-sm text-muted-foreground mb-3 max-lg:text-center">Follow me</p>
-              <div className="flex items-center gap-2 sm:gap-3 flex-wrap max-lg:justify-center">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3 text-center lg:text-left">Follow me</p>
+              <div className="flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2 md:gap-3 flex-wrap">
                 <a
                   href="https://medium.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
+                  className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
                   data-testid="link-medium"
                 >
-                  <SiMedium className="w-5 sm:w-6 h-5 sm:h-6" />
+                  <SiMedium className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
                   href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
+                  className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
                   data-testid="link-twitter"
                 >
-                  <FaXTwitter className="w-5 sm:w-6 h-5 sm:h-6" />
+                  <FaXTwitter className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
+                  className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
                   data-testid="link-instagram"
                 >
-                  <SiInstagram className="w-5 sm:w-6 h-5 sm:h-6" />
+                  <SiInstagram className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
                   href="https://www.linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
+                  className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
                   data-testid="link-linkedin"
                 >
-                  <SiLinkedin className="w-5 sm:w-6 h-5 sm:h-6" />
+                  <SiLinkedin className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
+                  className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
                   data-testid="link-youtube"
                 >
-                  <SiYoutube className="w-5 sm:w-6 h-5 sm:h-6" />
+                  <SiYoutube className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
               </div>
             </div>
 
-            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6 max-lg:justify-center">
+            <div className="flex gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-6 justify-center lg:justify-start w-full">
               <Button
                 variant="outline"
-                className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-lg"
+                className="rounded-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-xs sm:text-sm md:text-lg whitespace-nowrap"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/api/resume';
@@ -117,37 +117,37 @@ export function Hero() {
           </div>
 
           {/* Right Column - Profile Image with Floating Icons */}
-          <div className="relative flex justify-center items-center animate-in fade-in slide-in-from-right duration-700 delay-300">
-            <div className="relative">
+          <div className="relative w-full h-96 sm:h-[28rem] md:h-[32rem] lg:h-auto flex justify-center items-center animate-in fade-in slide-in-from-right duration-700 delay-300 lg:mt-0 mt-4 sm:mt-6">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-[28rem] lg:h-[28rem]">
               {/* Profile Image */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem] mx-auto">
+              <div className="relative w-full h-full">
                 <img
                   src={profileImage}
                   alt="Udhayakumar Profile"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
 
-              {/* Floating Tech Icons - Dark Gray Backgrounds */}
+              {/* Floating Tech Icons - Dark Gray Backgrounds - Hidden on small mobile, visible sm+ */}
               {/* Top Right - Cyber Security */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float hover:shadow-green-500/50">
-                <Shield className="w-8 h-8 text-green-400" />
+              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float hover:shadow-green-500/50">
+                <Shield className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-green-400" />
               </div>
               
               {/* Top Left - Burp Suite */}
-              <div className="absolute -top-2 -left-8 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150 hover:shadow-orange-500/50">
-                <div className="w-7 h-7 bg-orange-500 rounded-md text-white flex items-center justify-center text-xs font-bold">B</div>
+              <div className="absolute -top-1 -left-6 sm:-top-2 sm:-left-8 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150 hover:shadow-orange-500/50">
+                <div className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 bg-orange-500 rounded-md text-white flex items-center justify-center text-xs font-bold">B</div>
               </div>
               
               {/* Left Top - Kali Linux */}
-              <div className="absolute top-1/4 -left-6 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100 hover:shadow-red-600/50">
-                <SiKalilinux className="w-7 h-7 text-red-600" />
+              <div className="absolute top-1/4 -left-4 sm:-left-6 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100 hover:shadow-red-600/50">
+                <SiKalilinux className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-red-600" />
               </div>
               
               {/* Left Bottom - Raspberry Pi */}
-              <div className="absolute bottom-1/4 -left-8 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350 hover:shadow-red-500/50">
-                <div className="w-7 h-7 text-red-500 flex items-center justify-center">
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+              <div className="absolute bottom-1/4 -left-6 sm:-left-8 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350 hover:shadow-red-500/50">
+                <div className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-red-500 flex items-center justify-center">
+                  <svg className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7" viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="8" cy="8" r="2" />
                     <circle cx="16" cy="8" r="2" />
                     <circle cx="8" cy="16" r="2" />
@@ -157,23 +157,23 @@ export function Hero() {
               </div>
               
               {/* Bottom Left - Line */}
-              <div className="absolute -bottom-4 left-1/3 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-green-500/50 text-[15px]">
-                <div className="w-6 h-6 text-white font-bold text-lg">L</div>
+              <div className="absolute -bottom-2 left-1/3 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-green-500/50 text-[12px] sm:text-[15px]">
+                <div className="w-5 sm:w-6 md:w-6 h-5 sm:h-6 md:h-6 text-white font-bold text-sm sm:text-lg">L</div>
               </div>
               
               {/* Bottom Right - Android */}
-              <div className="absolute -bottom-6 right-1/4 w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300 hover:shadow-green-500/50">
-                <SiAndroid className="w-8 h-8 text-green-500" />
+              <div className="absolute -bottom-4 sm:-bottom-6 right-1/4 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300 hover:shadow-green-500/50">
+                <SiAndroid className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-green-500" />
               </div>
               
               {/* Right Bottom - Firefox */}
-              <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-orange-500/50">
-                <div className="w-7 h-7 text-orange-500 flex items-center justify-center font-bold">F</div>
+              <div className="absolute bottom-1/4 -right-6 sm:-right-8 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-orange-500/50">
+                <div className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-orange-500 flex items-center justify-center font-bold text-xs sm:text-sm md:text-base">F</div>
               </div>
               
               {/* Top Center - Linux */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-yellow-400/50">
-                <SiLinux className="w-7 h-7 text-yellow-400" />
+              <div className="absolute -top-4 sm:-top-6 left-1/2 -translate-x-1/2 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-yellow-400/50">
+                <SiLinux className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-yellow-400" />
               </div>
             </div>
           </div>
