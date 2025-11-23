@@ -19,27 +19,42 @@ export function Portfolio() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        // Fetch from multiple GitHub users
-        const [response1, response2] = await Promise.all([
-          fetch("https://api.github.com/users/Unkowboy0/repos?sort=stars&per_page=20"),
-          fetch("https://api.github.com/users/geetorus/repos?sort=stars&per_page=20")
-        ]);
+        // Fetch from multiple GitHub users - Unkownboy0 (with typo) and geetorus
+        const urls = [
+          "https://api.github.com/users/Unkownboy0/repos?sort=stars&per_page=20",
+          "https://api.github.com/users/geetorus/repos?sort=stars&per_page=20"
+        ];
 
-        const data1 = await response1.json();
-        const data2 = await response2.json();
+        const responses = await Promise.all(urls.map(url => fetch(url)));
+        
+        const data: GitHubProject[] = [];
+        for (const response of responses) {
+          if (!response.ok) {
+            console.warn("GitHub API error:", response.status, response.statusText);
+            continue;
+          }
+          const json = await response.json();
+          // Check for GitHub API error messages
+          if (Array.isArray(json)) {
+            data.push(...json);
+          }
+        }
 
-        // Combine and filter projects with descriptions
-        const allProjects = [...data1, ...data2].filter(
+        // Filter projects with descriptions
+        const filteredProjects = data.filter(
           (project: GitHubProject) => project.description && project.description.length > 0
         );
 
-        // Prioritize specific projects and remove duplicates
+        // Remove duplicates by name
         const uniqueProjects = Array.from(
-          new Map(allProjects.map(p => [p.name.toLowerCase(), p])).values()
+          new Map(filteredProjects.map(p => [p.name.toLowerCase(), p])).values()
         );
 
         // Sort by stars and take top 6
-        const sortedProjects = uniqueProjects.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 6);
+        const sortedProjects = uniqueProjects
+          .sort((a, b) => b.stargazers_count - a.stargazers_count)
+          .slice(0, 6);
+        
         setProjects(sortedProjects);
       } catch (error) {
         console.error("Failed to fetch GitHub projects:", error);
