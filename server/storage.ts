@@ -114,31 +114,31 @@ export class MemStorage implements IStorage {
     this.testimonials = [
       {
         id: "1",
-        name: "Sandiyo Christan",
+        name: "Arjun Singh",
         image: "https://i.ibb.co/k8TmS87/testimonial-img-1.webp",
         rating: 5,
-        text: "I discovered an authentication bypass and earned $200 for finding a bug in one of Bugcrowd's programs. Afterward, I enrolled in web app penetration testing and bug bounty, as well as mobile application bug bounty courses at Cappriciosec University. These courses significantly enhanced my knowledge and provided me with real-time experience in cybersecurity.",
+        text: "Udhayakumar's web penetration testing workshop completely changed my perspective on cybersecurity. His hands-on approach to vulnerability discovery and ethical hacking made complex concepts incredibly easy to understand. I've already identified critical vulnerabilities in our company's infrastructure and helped secure our applications. Highly recommended!",
       },
       {
         id: "2",
-        name: "Pranav Kataria",
+        name: "Priya Sharma",
         image: "https://i.ibb.co/tDgWr8Y/testimonial-img-2.webp",
         rating: 5,
-        text: "My name is Pranav Kataria, Assistant Commissioner of Gujarat Police. I have learned many valuable skills from Cappriciosec University, but my favorite topics are RF hacking, mobile tracking, Internet Protocol Detail Records, hacking social accounts and mobile devices, tracking cyber criminals, ATM card cloning, and more. These topics have given me insights into how cybercriminals take advantage of cybercrime and how to track them.",
+        text: "As a student with zero hacking experience, I was nervous about Geetorus's cybersecurity training. But Udhayakumar's teaching style is exceptional! The practical labs on Kali Linux, Metasploit, and penetration testing tools have given me real-world skills. I now feel confident pursuing a career in cybersecurity. Thank you for inspiring me!",
       },
       {
         id: "3",
-        name: "Jeyasri A",
+        name: "Rajesh Kumar",
         image: "https://i.ibb.co/p1J6Zvj/testimonial-img-3.webp",
         rating: 5,
-        text: "I discovered a code injection bug in one of Google's Android apps, and Google acknowledged my work by providing me with a place in their Hall of Fame. Encouraged by this recognition, I enrolled in Cappricio University's Mobile Application Pen-Testing course. In this course, I delved deep into concepts such as Android static code analysis, iOS dynamic hacking, and malware exploit development.",
+        text: "Working with Udhayakumar on our application security audit was eye-opening. His ability to identify critical vulnerabilities and propose effective mitigation strategies saved us from potential breaches. The detailed reporting and consultancy provided by Geetorus is professional and thorough. A true expert in the field!",
       },
       {
         id: "4",
-        name: "Dinesh Kumar K",
+        name: "Neha Patel",
         image: "https://i.ibb.co/ydpv23W/testimonial-img-4.webp",
         rating: 5,
-        text: "I recently earned a $500 bounty from a HackerOne program. I come from a commerce background, and the courses at Cappriciosec University have been instrumental in helping me start a career in the cybersecurity field. I am currently working at a Chennai-based startup cybersecurity company and have enrolled in courses on mobile app penetration testing and web bug bounty.",
+        text: "I attended Udhayakumar's cybersecurity awareness program at our college, and it was transformative. He explained real-world cyber threats, attack vectors, and defense mechanisms in such an engaging way. Over 700 students have benefited from his workshops, and I'm proud to be one of them. Geetorus is doing incredible work!",
       },
     ];
 
