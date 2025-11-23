@@ -8,6 +8,7 @@ import { BugReports } from "@/components/BugReports";
 import { Courses } from "@/components/Courses";
 import { Timeline } from "@/components/Timeline";
 import { Testimonials } from "@/components/Testimonials";
+import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Courses />
       <Timeline />
       <Testimonials />
+      <ContactForm />
       <Footer />
     </div>
   );

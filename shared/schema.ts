@@ -81,3 +81,35 @@ export const bugReportLogoSchema = z.object({
 });
 
 export type BugReportLogo = z.infer<typeof bugReportLogoSchema>;
+
+// Contact Form
+export const contactFormSchema = z.object({
+  id: z.string().optional(),
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().min(5, "Phone must be at least 5 characters"),
+  subject: z.string().min(5, "Subject must be at least 5 characters"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+  courseInterest: z.string().optional(),
+  createdAt: z.string().optional(),
+});
+
+export const contactFormInsertSchema = contactFormSchema.omit({ id: true, createdAt: true });
+export type ContactForm = z.infer<typeof contactFormSchema>;
+export type ContactFormInsert = z.infer<typeof contactFormInsertSchema>;
+
+// Blog Post
+export const blogPostSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  slug: z.string(),
+  content: z.string(),
+  excerpt: z.string(),
+  author: z.string(),
+  image: z.string().optional(),
+  tags: z.array(z.string()),
+  createdAt: z.string(),
+  updatedAt: z.string(),
+});
+
+export type BlogPost = z.infer<typeof blogPostSchema>;

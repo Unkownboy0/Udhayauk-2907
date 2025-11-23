@@ -176,6 +176,17 @@ Instagram: instagram.com/karthi_the_hacker`;
     }
   });
 
+  // Contact Form endpoint
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const data = req.body;
+      const contact = await storage.createContactForm(data);
+      res.json(contact);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to submit contact form" });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;

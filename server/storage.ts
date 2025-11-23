@@ -7,6 +7,8 @@ import {
   type TechLogo,
   type Stats,
   type BugReportLogo,
+  type ContactForm,
+  type ContactFormInsert,
 } from "@shared/schema";
 
 export interface IStorage {
@@ -34,6 +36,10 @@ export interface IStorage {
   
   // Stats
   getStats(): Promise<Stats>;
+  
+  // Contact Forms
+  createContactForm(data: ContactFormInsert): Promise<ContactForm>;
+  getContactForms(): Promise<ContactForm[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -45,6 +51,7 @@ export class MemStorage implements IStorage {
   private techLogos: TechLogo[];
   private bugReportLogos: BugReportLogo[];
   private stats: Stats;
+  private contactForms: ContactForm[];
 
   constructor() {
     // Initialize Portfolio Items
@@ -248,6 +255,9 @@ export class MemStorage implements IStorage {
       completed: "1000+",
       clients: "1000+",
     };
+
+    // Initialize Contact Forms
+    this.contactForms = [];
   }
 
   async getPortfolioItems(): Promise<PortfolioItem[]> {
@@ -284,6 +294,20 @@ export class MemStorage implements IStorage {
 
   async getStats(): Promise<Stats> {
     return this.stats;
+  }
+
+  async createContactForm(data: ContactFormInsert): Promise<ContactForm> {
+    const form: ContactForm = {
+      id: Date.now().toString(),
+      ...data,
+      createdAt: new Date().toISOString(),
+    };
+    this.contactForms.push(form);
+    return form;
+  }
+
+  async getContactForms(): Promise<ContactForm[]> {
+    return this.contactForms;
   }
 }
 
