@@ -144,7 +144,7 @@ export function About() {
 
           <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform" data-testid="stat-completed">
             <CheckCircle className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-primary" />
-            <div className="text-3xl sm:text-5xl font-extrabold text-primary mb-1 sm:mb-2">{isVisible ? counts.completed : 0}+</div>
+            <div className="text-3xl sm:text-5xl font-extrabold text-primary mb-1 sm:mb-2">100+</div>
             <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide">Projects Completed</div>
           </div>
 
