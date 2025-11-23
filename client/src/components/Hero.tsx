@@ -26,10 +26,8 @@ export function Hero() {
             </div>
 
             <div className="relative w-full text-center lg:text-left mb-3 sm:mb-4 md:mb-6">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-snug sm:leading-tight break-words">
-                Cybersecurity Researcher & Threat Investigator
-                <br className="hidden sm:inline" />
-                Ethical Hacker & Security Analyst
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-snug sm:leading-tight break-words">
+                Emerging Cybersecurity Researcher & Threat Investigator with growing expertise in Ethical Hacking, Web VAPT, IoT Security, and Network Defense.
               </h1>
               {/* Animated underline */}
               <svg
