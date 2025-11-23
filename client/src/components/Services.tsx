@@ -18,12 +18,12 @@ export function Services() {
 
   if (isLoading) {
     return (
-      <section id="services" className="py-24 bg-background/50" data-testid="section-services">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold">Services</h2>
+      <section id="services" className="py-12 sm:py-16 lg:py-24 bg-background/50" data-testid="section-services">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold">Services</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {[1, 2, 3, 4].map((i) => (
               <Card key={i} className="p-8">
                 <Skeleton className="w-12 h-12 mb-6" />
@@ -39,10 +39,10 @@ export function Services() {
 
   if (error || !services) {
     return (
-      <section id="services" className="py-24 bg-background/50" data-testid="section-services">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section id="services" className="py-12 sm:py-16 lg:py-24 bg-background/50" data-testid="section-services">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center">
-            <p className="text-muted-foreground">Failed to load services. Please try again later.</p>
+            <p className="text-sm sm:text-base text-muted-foreground">Failed to load services. Please try again later.</p>
           </div>
         </div>
       </section>
@@ -50,23 +50,27 @@ export function Services() {
   }
 
   return (
-    <section id="services" className="py-24 bg-background/50" data-testid="section-services">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold">Services</h2>
-          <div className="w-32 h-1 bg-cyan mx-auto mt-4" />
+    <section id="services" className="py-12 sm:py-16 lg:py-24 bg-background/50" data-testid="section-services">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold">Services</h2>
+          <div className="w-20 sm:w-32 h-1 bg-cyan mx-auto mt-4" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 animate-in fade-in duration-700">
           {services.map((service, index) => (
             <Card
               key={service.id}
-              className="p-8 hover:scale-[1.02] transition-transform duration-300 hover-elevate border-card-border"
+              className="p-4 sm:p-6 lg:p-8 hover:scale-[1.02] transition-all duration-300 hover-elevate border-card-border animate-in fade-in slide-in-from-bottom"
+              style={{
+                animationDelay: `${index * 100}ms`,
+                animationFillMode: 'both'
+              }}
               data-testid={`card-service-${index}`}
             >
-              <div className="mb-6">{iconMap[service.icon as keyof typeof iconMap]}</div>
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+              <div className="mb-4 sm:mb-6">{iconMap[service.icon as keyof typeof iconMap]}</div>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">{service.title}</h3>
+              <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed">{service.description}</p>
             </Card>
           ))}
         </div>
