@@ -130,27 +130,27 @@ export function About() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
-          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform" data-testid="stat-experience">
-            <Clock className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-primary" />
-            <div className="text-3xl sm:text-5xl font-extrabold text-primary mb-1 sm:mb-2">03+</div>
+          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform animate-stat-card" style={{animationDelay: '0ms'}} data-testid="stat-experience">
+            <Clock className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-primary animate-icon" />
+            <div className="text-3xl sm:text-5xl font-extrabold text-primary mb-1 sm:mb-2">{String(counts.experience).padStart(2, '0')}+</div>
             <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide">Years of Experience</div>
           </div>
 
-          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform" data-testid="stat-projects">
-            <Briefcase className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-cyan" />
-            <div className="text-3xl sm:text-5xl font-extrabold text-cyan mb-1 sm:mb-2">70+</div>
+          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform animate-stat-card" style={{animationDelay: '100ms'}} data-testid="stat-projects">
+            <Briefcase className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-cyan animate-icon" />
+            <div className="text-3xl sm:text-5xl font-extrabold text-cyan mb-1 sm:mb-2">{counts.projects}+</div>
             <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide">In Time Projects</div>
           </div>
 
-          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform" data-testid="stat-completed">
-            <CheckCircle className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-primary" />
-            <div className="text-3xl sm:text-5xl font-extrabold text-primary mb-1 sm:mb-2">100+</div>
+          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform animate-stat-card" style={{animationDelay: '200ms'}} data-testid="stat-completed">
+            <CheckCircle className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-primary animate-icon" />
+            <div className="text-3xl sm:text-5xl font-extrabold text-primary mb-1 sm:mb-2">{counts.completed}+</div>
             <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide">Projects Completed</div>
           </div>
 
-          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform" data-testid="stat-clients">
-            <Users className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-cyan" />
-            <div className="text-3xl sm:text-5xl font-extrabold text-cyan mb-1 sm:mb-2">700+</div>
+          <div className="text-center p-4 sm:p-6 rounded-xl bg-card border border-card-border hover-elevate transition-all duration-500 transform animate-stat-card" style={{animationDelay: '300ms'}} data-testid="stat-clients">
+            <Users className="w-8 sm:w-12 h-8 sm:h-12 mx-auto mb-2 sm:mb-4 text-cyan animate-icon" />
+            <div className="text-3xl sm:text-5xl font-extrabold text-cyan mb-1 sm:mb-2">{counts.clients}+</div>
             <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wide">Happy Clients/Students</div>
           </div>
         </div>
