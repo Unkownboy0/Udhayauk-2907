@@ -70,12 +70,6 @@ export function Courses() {
             </a>
           ))}
         </div>
-
-        <div className="text-center">
-          <Button variant="outline" className="rounded-full px-8" data-testid="button-load-more">
-            Load more...
-          </Button>
-        </div>
       </div>
     </section>
   );
