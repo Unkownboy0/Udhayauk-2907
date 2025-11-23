@@ -18,23 +18,23 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-24 lg:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Text */}
-          <div className="space-y-4 sm:space-y-6 animate-in fade-in slide-in-from-left duration-700">
-            <div className="flex items-center gap-2">
-              <HandIcon className="w-6 sm:w-8 h-6 sm:h-8 text-cyan" />
-              <span className="text-base sm:text-lg text-muted-foreground">
+          <div className="w-full lg:w-1/2 h-full flex flex-col justify-center lg:items-start items-center animate-in fade-in slide-in-from-left duration-700">
+            <div className="flex items-center gap-3 sm:gap-4 max-lg:justify-center mb-4 sm:mb-6">
+              <HandIcon className="w-7 sm:w-9 h-7 sm:h-9 text-cyan flex-shrink-0 hover:scale-110 transition-all duration-500" />
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold">
                 Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
-              </span>
+              </p>
             </div>
 
-            <div className="relative inline-block">
-              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-tight">
+            <div className="relative w-full max-lg:text-center mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
                 Cybersecurity Researcher & Threat Investigator
                 <br />
                 Ethical Hacker & Security Analyst
               </h1>
               {/* Animated underline */}
               <svg
-                className="absolute -bottom-2 left-0 w-full h-8"
+                className="absolute -bottom-1 sm:-bottom-2 left-0 lg:left-auto lg:right-0 w-32 sm:w-40 h-6 sm:h-8"
                 viewBox="0 0 375 34"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,11 +46,11 @@ export function Hero() {
               </svg>
             </div>
 
-            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl">CEO & Founder of Geetorus Cybersecurity in Erode, India. I specialize in ethical hacking, securing web and mobile platforms, developing security tools, and providing cyber awareness through workshops and seminars. My focus is to find vulnerabilities, prevent attacks, and build a safer digital pace.</p>
+            <p className="text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl text-muted-foreground max-lg:text-center mb-4 sm:mb-6">CEO & Founder of Geetorus Cybersecurity in Erode, India. I specialize in ethical hacking, securing web and mobile platforms, developing security tools, and providing cyber awareness through workshops and seminars. My focus is to find vulnerabilities, prevent attacks, and build a safer digital pace.</p>
 
-            <div>
-              <p className="text-xs sm:text-sm text-muted-foreground mb-3">Follow me</p>
-              <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
+            <div className="w-full">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3 max-lg:text-center">Follow me</p>
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap max-lg:justify-center">
                 <a
                   href="https://medium.com"
                   target="_blank"
@@ -58,7 +58,7 @@ export function Hero() {
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
                   data-testid="link-medium"
                 >
-                  <SiMedium className="w-6 h-6" />
+                  <SiMedium className="w-5 sm:w-6 h-5 sm:h-6" />
                 </a>
                 <a
                   href="https://x.com"
@@ -67,7 +67,7 @@ export function Hero() {
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
                   data-testid="link-twitter"
                 >
-                  <FaXTwitter className="w-6 h-6" />
+                  <FaXTwitter className="w-5 sm:w-6 h-5 sm:h-6" />
                 </a>
                 <a
                   href="https://instagram.com"
@@ -76,7 +76,7 @@ export function Hero() {
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
                   data-testid="link-instagram"
                 >
-                  <SiInstagram className="w-6 h-6" />
+                  <SiInstagram className="w-5 sm:w-6 h-5 sm:h-6" />
                 </a>
                 <a
                   href="https://www.linkedin.com"
@@ -85,7 +85,7 @@ export function Hero() {
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
                   data-testid="link-linkedin"
                 >
-                  <SiLinkedin className="w-6 h-6" />
+                  <SiLinkedin className="w-5 sm:w-6 h-5 sm:h-6" />
                 </a>
                 <a
                   href="https://youtube.com"
@@ -94,15 +94,15 @@ export function Hero() {
                   className="hover-elevate active-elevate-2 p-2 rounded-lg transition-all"
                   data-testid="link-youtube"
                 >
-                  <SiYoutube className="w-6 h-6" />
+                  <SiYoutube className="w-5 sm:w-6 h-5 sm:h-6" />
                 </a>
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6 max-lg:justify-center">
               <Button
                 variant="outline"
-                className="rounded-full px-8 py-6 text-lg"
+                className="rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-lg"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/api/resume';
