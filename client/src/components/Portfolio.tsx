@@ -18,9 +18,10 @@ export function Portfolio() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("https://api.github.com/users/Unkownboy0/repos?sort=stars&per_page=6");
+        const response = await fetch("https://api.github.com/users/Unkownboy0/repos?sort=stars&per_page=12");
         const data = await response.json();
-        setProjects(data);
+        const filteredProjects = data.filter((project: GitHubProject) => project.description);
+        setProjects(filteredProjects.slice(0, 6));
       } catch (error) {
         console.error("Failed to fetch GitHub projects:", error);
       } finally {
