@@ -183,11 +183,6 @@ export function Hero() {
                 <div className="w-7 h-7 text-orange-500 flex items-center justify-center font-bold">F</div>
               </div>
               
-              {/* Right Middle - Cryptography */}
-              <div className="absolute right-1/2 -right-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-cyan-400/50">
-                <Lock className="w-7 h-7 text-cyan-400" />
-              </div>
-              
               {/* Top Center - Linux */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-yellow-400/50">
                 <SiLinux className="w-7 h-7 text-yellow-400" />
