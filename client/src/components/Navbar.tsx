@@ -59,12 +59,6 @@ export function Navbar() {
             >
               {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
-            <Button
-              className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground px-6"
-              data-testid="button-blogs"
-            >
-              Blogs | Write-ups
-            </Button>
           </div>
         </div>
       </div>
