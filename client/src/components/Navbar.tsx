@@ -27,7 +27,7 @@ export function Navbar() {
             <a href="#home" onClick={closeMenu} className="text-foreground hover:text-cyan transition-colors font-medium" data-testid="link-home">
               Home
             </a>
-            <a href="#about" onClick={closeMenu} className="text-foreground hover:text-cyan transition-colors font-medium" data-testid="link-about">
+            <a href="#about" onClick={closeMenu} className="text-foreground hover:text-cyan transition-colors font-medium underline" data-testid="link-about">
               About Me
             </a>
             <a href="#services" onClick={closeMenu} className="text-foreground hover:text-cyan transition-colors font-medium" data-testid="link-services">
@@ -35,9 +35,6 @@ export function Navbar() {
             </a>
             <a href="#portfolio" onClick={closeMenu} className="text-foreground hover:text-cyan transition-colors font-medium" data-testid="link-portfolio">
               Portfolio
-            </a>
-            <a href="#achievements" onClick={closeMenu} className="text-foreground hover:text-cyan transition-colors font-medium" data-testid="link-achievements">
-              Achievements
             </a>
             <a href="#testimonials" onClick={closeMenu} className="text-foreground hover:text-cyan transition-colors font-medium" data-testid="link-testimonials">
               Testimonials
