@@ -1,6 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Portfolio endpoints
@@ -90,6 +92,87 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(stats);
     } catch (error) {
       res.status(500).json({ error: "Failed to fetch stats" });
+    }
+  });
+
+  // Resume download endpoint
+  app.get("/api/resume", (req, res) => {
+    try {
+      const resumeContent = `KARTHIKEYAN V
+Cybersecurity Researcher & Investigator
+Chennai, India
+Phone: +91-827-091-3635
+Email: contact@karthithehacker.com
+
+PROFESSIONAL SUMMARY
+CEO of Cappricio Securities, specializing in cybersecurity research and penetration testing.
+Published researcher with focus on web security, mobile app vulnerabilities, and IoT security.
+
+EXPERTISE
+- Web Vulnerability Assessment & Penetration Testing (VAPT)
+- Mobile App Security Testing (iOS & Android)
+- IoT & Robotics Security
+- Cybersecurity Tool Development
+- Android OS Security Research
+- Server-Side Bug Hunting
+
+ACHIEVEMENTS
+- 10+ Years of Professional Experience
+- 70+ Active Security Projects
+- 1000+ Security Vulnerabilities Discovered
+- 1000+ Students & Professionals Trained
+- Multiple CVE Discoveries in Major Tech Companies
+- \$5,000 Android OS Bug Bounty Award (2020)
+- Featured in Google Hall of Fame
+
+RECOGNITION & CERTIFICATIONS
+- Google Security Researcher Hall of Fame
+- Android Security Research Contributor
+- Microsoft Security Researcher Program
+- Published Cybersecurity Researcher
+- CEO - Cappricio Securities
+
+TOOLS & TECHNOLOGIES
+- Burp Suite | Metasploit | Nmap | Wireshark
+- JADX | IDA Pro | Frida | Charles Proxy
+- Android Studio | Xcode | Python | JavaScript
+- Docker | Kubernetes | Linux | Windows
+
+EDUCATION & TRAINING
+- Advanced Penetration Testing Training
+- Mobile Application Security Specialist
+- IoT Security Certification
+- Cybercrime Investigation Specialist
+
+LANGUAGES
+- English (Fluent)
+- Tamil (Native)
+
+FOLLOW ME
+GitHub: github.com/karthithehacker
+Twitter: @karthithehacker
+LinkedIn: linkedin.com/in/karthikeyan--v/
+Medium: medium.com/@karthithehacker
+YouTube: youtube.com/@karthi_the_hacker
+Instagram: instagram.com/karthi_the_hacker`;
+      
+      res.setHeader("Content-Type", "text/plain");
+      res.setHeader("Content-Disposition", "attachment; filename=Karthikeyan_V_Resume.txt");
+      res.send(resumeContent);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to download resume" });
+    }
+  });
+
+  // Export portfolio as JSON
+  app.get("/api/export/portfolio", async (req, res) => {
+    try {
+      const portfolioItems = await storage.getPortfolioItems();
+      res.setHeader("Content-Type", "application/json");
+      res.setHeader("Content-Disposition", "attachment; filename=portfolio.json");
+      res.json(portfolioItems);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to export portfolio" });
     }
   });
 

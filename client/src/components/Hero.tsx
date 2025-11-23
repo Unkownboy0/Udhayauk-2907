@@ -104,12 +104,27 @@ export function Hero() {
               </div>
             </div>
 
-            <Button
-              className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg"
-              data-testid="button-roadmaps"
-            >
-              Roadmaps
-            </Button>
+            <div className="flex gap-4">
+              <Button
+                className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg"
+                data-testid="button-roadmaps"
+              >
+                Roadmaps
+              </Button>
+              <Button
+                variant="outline"
+                className="rounded-full px-8 py-6 text-lg"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/api/resume';
+                  link.download = 'Karthikeyan_V_Resume.pdf';
+                  link.click();
+                }}
+                data-testid="button-download-resume"
+              >
+                Download Resume
+              </Button>
+            </div>
           </div>
 
           {/* Right Column - Profile Image with Floating Icons */}
