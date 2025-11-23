@@ -140,60 +140,67 @@ export function Hero() {
                 />
               </div>
 
-              {/* Floating Tech Icons */}
-              {/* Top Right - Security Shield */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float">
-                <Shield className="w-8 h-8 text-primary" />
+              {/* Floating Tech Icons - Dark Gray Backgrounds */}
+              {/* Top Right - Cyber Security */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float hover:shadow-green-500/50">
+                <Shield className="w-8 h-8 text-green-400" />
               </div>
               
-              {/* Top Left - Python */}
-              <div className="absolute -top-2 -left-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150">
-                <SiPython className="w-7 h-7 text-cyan" />
+              {/* Top Left - Burp Suite */}
+              <div className="absolute -top-2 -left-8 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150 hover:shadow-orange-500/50">
+                <div className="w-7 h-7 bg-orange-500 rounded-md text-white flex items-center justify-center text-xs font-bold">B</div>
               </div>
               
               {/* Left Top - Kali Linux */}
-              <div className="absolute top-1/4 -left-6 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100">
-                <SiKalilinux className="w-7 h-7 text-cyan" />
+              <div className="absolute top-1/4 -left-6 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100 hover:shadow-red-600/50">
+                <SiKalilinux className="w-7 h-7 text-red-600" />
               </div>
               
-              {/* Left Middle - Terminal */}
-              <div className="absolute left-1/2 -left-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-250">
-                <Terminal className="w-7 h-7 text-primary" />
+              {/* Left Middle - Python */}
+              <div className="absolute left-1/2 -left-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-250 hover:shadow-blue-500/50">
+                <SiPython className="w-7 h-7 text-blue-500" />
               </div>
               
-              {/* Left Bottom - Docker */}
-              <div className="absolute bottom-1/4 -left-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350">
-                <SiDocker className="w-7 h-7 text-cyan" />
+              {/* Left Bottom - Raspberry Pi */}
+              <div className="absolute bottom-1/4 -left-8 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350 hover:shadow-red-500/50">
+                <div className="w-7 h-7 text-red-500 flex items-center justify-center">
+                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="8" cy="8" r="2" />
+                    <circle cx="16" cy="8" r="2" />
+                    <circle cx="8" cy="16" r="2" />
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" opacity="0.5" />
+                  </svg>
+                </div>
               </div>
               
-              {/* Bottom Left - Git */}
-              <div className="absolute -bottom-4 left-1/3 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200">
-                <SiGit className="w-7 h-7 text-primary" />
+              {/* Bottom Left - Line */}
+              <div className="absolute -bottom-4 left-1/3 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-green-500/50">
+                <div className="w-6 h-6 text-white font-bold text-lg">L</div>
               </div>
               
               {/* Bottom Right - Android */}
-              <div className="absolute -bottom-6 right-1/4 w-16 h-16 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300">
-                <SiAndroid className="w-8 h-8 text-cyan" />
+              <div className="absolute -bottom-6 right-1/4 w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300 hover:shadow-green-500/50">
+                <SiAndroid className="w-8 h-8 text-green-500" />
               </div>
               
-              {/* Right Bottom - Code */}
-              <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200">
-                <Code2 className="w-7 h-7 text-primary" />
+              {/* Right Bottom - Firefox */}
+              <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-orange-500/50">
+                <div className="w-7 h-7 text-orange-500 flex items-center justify-center font-bold">F</div>
               </div>
               
-              {/* Right Middle - Lock */}
-              <div className="absolute right-1/2 -right-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400">
-                <Lock className="w-7 h-7 text-cyan" />
+              {/* Right Middle - Cryptography */}
+              <div className="absolute right-1/2 -right-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-cyan-400/50">
+                <Lock className="w-7 h-7 text-cyan-400" />
               </div>
               
-              {/* Right Top - Cpu */}
-              <div className="absolute top-1/4 -right-6 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-50">
-                <Cpu className="w-7 h-7 text-primary" />
+              {/* Right Top - John The Ripper */}
+              <div className="absolute top-1/4 -right-6 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-50 hover:shadow-red-700/50">
+                <div className="w-7 h-7 text-red-700 flex items-center justify-center font-bold text-xs">JTR</div>
               </div>
               
               {/* Top Center - Linux */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400">
-                <SiLinux className="w-7 h-7 text-cyan" />
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-yellow-400/50">
+                <SiLinux className="w-7 h-7 text-yellow-400" />
               </div>
             </div>
           </div>
