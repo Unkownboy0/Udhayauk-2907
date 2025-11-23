@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { SiMedium, SiLinkedin, SiYoutube, SiInstagram, SiKalilinux } from "react-icons/si";
+import { SiMedium, SiLinkedin, SiYoutube, SiInstagram, SiKalilinux, SiAndroid, SiLinux, SiPython } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import { HandIcon } from "lucide-react";
+import { HandIcon, Shield, Terminal } from "lucide-react";
 import profileImage from "@assets/WhatsApp_Image_2025-11-20_at_20.06.59_13b777e6-removebg-preview_1763908015110.png";
 
 export function Hero() {
@@ -142,16 +142,16 @@ export function Hero() {
 
               {/* Floating Tech Icons */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float">
-                <div className="w-8 h-8 bg-primary/20 rounded-lg" />
+                <Shield className="w-8 h-8 text-primary" />
               </div>
               <div className="absolute top-1/4 -left-6 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100">
                 <SiKalilinux className="w-7 h-7 text-cyan" />
               </div>
               <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200">
-                <div className="w-7 h-7 bg-primary/20 rounded-lg" />
+                <Terminal className="w-7 h-7 text-primary" />
               </div>
               <div className="absolute -bottom-6 left-1/4 w-16 h-16 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300">
-                <div className="w-8 h-8 bg-cyan/20 rounded-lg" />
+                <SiAndroid className="w-8 h-8 text-cyan" />
               </div>
             </div>
           </div>
