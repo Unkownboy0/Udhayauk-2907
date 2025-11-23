@@ -87,27 +87,6 @@ export function Portfolio() {
                 className="group block"
                 data-testid={`card-portfolio-${project.id}`}
               >
-                <div className="bg-card border border-border rounded-lg p-6 hover:bg-card/80 transition-all duration-300 hover-elevate h-full flex flex-col">
-                  <div className="flex items-start justify-between mb-4">
-                    <Github className="w-6 h-6 text-cyan" />
-                    {project.stargazers_count > 0 && (
-                      <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded">
-                        ⭐ {project.stargazers_count}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-1">
-                    {project.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
-                    {project.description || "No description available"}
-                  </p>
-                  {project.language && (
-                    <span className="inline-block text-xs bg-background text-muted-foreground px-3 py-1 rounded-full border border-border">
-                      {project.language}
-                    </span>
-                  )}
-                </div>
               </a>
             ))
           )}
