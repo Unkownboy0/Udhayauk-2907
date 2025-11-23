@@ -1,22 +1,13 @@
-import { useState } from "react";
+
 import { Card } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQuery } from "@tanstack/react-query";
 import type { PortfolioItem } from "@shared/schema";
 
 export function Portfolio() {
-  const [activeTab, setActiveTab] = useState<string>("all");
-
   const { data: portfolioItems, isLoading, error } = useQuery<PortfolioItem[]>({
     queryKey: ["/api/portfolio"],
   });
-
-  const categories = ["all", "hardware tool", "social engineering tool", "osint", "web security tool"];
-
-  const filteredItems = !portfolioItems ? [] : activeTab === "all" 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeTab);
 
   if (isLoading) {
     return (
@@ -56,23 +47,8 @@ export function Portfolio() {
           <h2 className="text-4xl lg:text-5xl font-bold">Portfolio</h2>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="w-full justify-start flex-wrap h-auto gap-2 bg-transparent mb-12" data-testid="tabs-portfolio-filter">
-            {categories.map((category) => (
-              <TabsTrigger
-                key={category}
-                value={category}
-                className="data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none pb-2 capitalize"
-                data-testid={`tab-${category.replace(/\s+/g, '-')}`}
-              >
-                {category === "all" ? "All Projects" : category}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
+          {portfolioItems?.map((item) => (
             <a
               key={item.id}
               href={item.link}
