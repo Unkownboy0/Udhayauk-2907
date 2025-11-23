@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { SiMedium, SiLinkedin, SiYoutube, SiInstagram, SiKalilinux, SiAndroid, SiLinux, SiPython, SiDocker, SiGit, SiBurpsuite } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import { HandIcon, Shield, Terminal, Code2, Zap, Lock, Cpu } from "lucide-react";
+import { HandIcon, Shield, Terminal, Code2, Zap, Lock, Cpu, Skull, Wrench } from "lucide-react";
 import profileImage from "@assets/WhatsApp_Image_2025-11-20_at_20.06.59_13b777e6-removebg-preview_1763908015110.png";
 
 export function Hero() {
@@ -128,52 +128,55 @@ export function Hero() {
                 />
               </div>
 
-              {/* Floating Tech Icons - Dark Gray Backgrounds - Hidden on small mobile, visible sm+ */}
+              {/* Floating Tech Icons - Dark Gray Backgrounds - Hacking & Security Tools */}
               {/* Top Right - Cyber Security */}
-              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float hover:shadow-green-500/50">
-                <Shield className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-green-400" />
+              <div className="absolute -top-3 -right-3 sm:-top-5 sm:-right-5 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float hover:shadow-green-500/50">
+                <Shield className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-green-400" />
               </div>
               
-              {/* Top Left - Burp Suite */}
-              <div className="absolute -top-1 -left-6 sm:-top-2 sm:-left-8 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150 hover:shadow-orange-500/50">
-                <div className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 bg-orange-500 rounded-md text-white flex items-center justify-center text-xs font-bold">B</div>
+              {/* Top Left - Kali Linux */}
+              <div className="absolute -top-2 -left-8 sm:-top-4 sm:-left-10 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100 hover:shadow-red-600/50">
+                <SiKalilinux className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-red-600" />
               </div>
               
-              {/* Left Top - Kali Linux */}
-              <div className="absolute top-1/4 -left-4 sm:-left-6 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100 hover:shadow-red-600/50">
-                <SiKalilinux className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-red-600" />
+              {/* Left Top - Burp Suite */}
+              <div className="absolute top-1/4 -left-6 sm:-left-8 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150 hover:shadow-orange-500/50">
+                <div className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 bg-orange-500 rounded-md text-white flex items-center justify-center text-sm font-bold">B</div>
               </div>
               
-              {/* Left Bottom - Raspberry Pi */}
-              <div className="absolute bottom-1/4 -left-6 sm:-left-8 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350 hover:shadow-red-500/50">
-                <div className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-red-500 flex items-center justify-center">
-                  <svg className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="8" cy="8" r="2" />
-                    <circle cx="16" cy="8" r="2" />
-                    <circle cx="8" cy="16" r="2" />
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" opacity="0.5" />
-                  </svg>
-                </div>
+              {/* Left Bottom - Metasploit */}
+              <div className="absolute bottom-1/3 -left-8 sm:-left-10 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300 hover:shadow-blue-500/50">
+                <Skull className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-blue-500" />
               </div>
               
-              {/* Bottom Left - Line */}
-              <div className="absolute -bottom-2 left-1/3 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-green-500/50 text-[12px] sm:text-[15px]">
-                <div className="w-5 sm:w-6 md:w-6 h-5 sm:h-6 md:h-6 text-white font-bold text-sm sm:text-lg">L</div>
+              {/* Bottom Left - Wifite */}
+              <div className="absolute -bottom-3 left-1/4 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-purple-500/50">
+                <Wrench className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-purple-500" />
               </div>
               
               {/* Bottom Right - Android */}
-              <div className="absolute -bottom-4 sm:-bottom-6 right-1/4 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300 hover:shadow-green-500/50">
-                <SiAndroid className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-green-500" />
+              <div className="absolute -bottom-4 sm:-bottom-6 right-1/4 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-green-500/50">
+                <SiAndroid className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-green-500" />
               </div>
               
               {/* Right Bottom - Firefox */}
-              <div className="absolute bottom-1/4 -right-6 sm:-right-8 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-orange-500/50">
-                <div className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-orange-500 flex items-center justify-center font-bold text-xs sm:text-sm md:text-base">F</div>
+              <div className="absolute bottom-1/4 -right-8 sm:-right-10 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350 hover:shadow-orange-500/50">
+                <div className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-orange-500 flex items-center justify-center font-bold text-sm sm:text-base md:text-lg">F</div>
               </div>
               
-              {/* Top Center - Linux */}
-              <div className="absolute -top-4 sm:-top-6 left-1/2 -translate-x-1/2 w-11 sm:w-13 md:w-14 h-11 sm:h-13 md:h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-yellow-400/50">
-                <SiLinux className="w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 text-yellow-400" />
+              {/* Right Top - Arch Linux */}
+              <div className="absolute top-1/3 -right-8 sm:-right-10 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-250 hover:shadow-cyan-500/50">
+                <SiLinux className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-cyan-400" />
+              </div>
+              
+              {/* Top Center - Hashcat */}
+              <div className="absolute -top-5 sm:-top-7 left-1/2 -translate-x-1/2 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150 hover:shadow-pink-500/50">
+                <Terminal className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-pink-500" />
+              </div>
+              
+              {/* John the Ripper - Hidden on mobile, visible sm+ */}
+              <div className="hidden sm:flex absolute top-0 -right-12 md:-right-14 w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gray-700 rounded-2xl items-center justify-center shadow-lg animate-float delay-500 hover:shadow-yellow-500/50">
+                <Code2 className="w-7 sm:w-8 md:w-10 h-7 sm:h-8 md:h-10 text-yellow-500" />
               </div>
             </div>
           </div>
