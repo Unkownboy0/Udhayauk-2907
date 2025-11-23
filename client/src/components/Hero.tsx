@@ -22,7 +22,7 @@ export function Hero() {
             <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-6 w-full">
               <HandIcon className="w-6 sm:w-7 md:w-8 lg:w-9 h-6 sm:h-7 md:h-8 lg:h-9 text-cyan flex-shrink-0 hover:scale-110 transition-all duration-500" />
               <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-center lg:text-left">
-                Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
+                👋 Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
               </p>
             </div>
 
