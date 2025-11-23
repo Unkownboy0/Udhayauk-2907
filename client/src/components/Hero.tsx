@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { SiMedium, SiLinkedin, SiYoutube, SiInstagram, SiKalilinux, SiAndroid, SiLinux, SiPython, SiDocker, SiGit, SiBurpsuite } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import { HandIcon, Shield, Terminal, Code2, Zap, Lock, Cpu, Skull, Wrench } from "lucide-react";
+import { Shield, Terminal, Code2, Zap, Lock, Cpu, Skull, Wrench } from "lucide-react";
 import profileImage from "@assets/WhatsApp_Image_2025-11-20_at_20.06.59_13b777e6-removebg-preview_1763908015110.png";
 
 export function Hero() {
@@ -19,8 +19,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center min-h-screen lg:min-h-auto">
           {/* Left Column - Text */}
           <div className="flex flex-col justify-center items-center lg:items-start lg:pr-6 animate-in fade-in slide-in-from-left duration-700">
-            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-6 w-full">
-              <HandIcon className="w-6 sm:w-7 md:w-8 lg:w-9 h-6 sm:h-7 md:h-8 lg:h-9 text-cyan flex-shrink-0 hover:scale-110 transition-all duration-500" />
+            <div className="w-full mb-3 sm:mb-4 md:mb-6">
               <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-center lg:text-left">
                 👋 Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
               </p>
