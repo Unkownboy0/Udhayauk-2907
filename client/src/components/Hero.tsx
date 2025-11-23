@@ -102,8 +102,8 @@ export function Hero() {
                 className="rounded-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-xs sm:text-sm md:text-lg whitespace-nowrap"
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Udhayakumar_Resume.docx';
-                  link.download = 'Udhayakumar_Resume.docx';
+                  link.href = '/Udhayakumar_Resume.pdf';
+                  link.download = 'Udhayakumar_Resume.pdf';
                   link.click();
                 }}
                 data-testid="button-download-resume"
