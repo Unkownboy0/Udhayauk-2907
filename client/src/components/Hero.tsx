@@ -188,11 +188,6 @@ export function Hero() {
                 <Lock className="w-7 h-7 text-cyan-400" />
               </div>
               
-              {/* Right Top - John The Ripper */}
-              <div className="absolute top-1/4 -right-6 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-50 hover:shadow-red-700/50">
-                <div className="w-7 h-7 text-red-700 flex items-center justify-center font-bold text-xs">JTR</div>
-              </div>
-              
               {/* Top Center - Linux */}
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400 hover:shadow-yellow-400/50">
                 <SiLinux className="w-7 h-7 text-yellow-400" />
