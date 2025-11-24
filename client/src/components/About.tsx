@@ -1,20 +1,14 @@
 import { Clock, CheckCircle, Users, Briefcase } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
 import { useEffect, useRef, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import type { Stats } from "@shared/schema";
+import { stats } from "@/data/staticData";
 
 export function About() {
   const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState<{
-    experience: number;
-    projects: number;
-    completed: number;
-    clients: number;
-  } | null>(null);
-
-  const { data: stats, isLoading, error } = useQuery<Stats>({
-    queryKey: ["/api/stats"],
+  const [counts, setCounts] = useState({
+    experience: parseInt(stats.experience),
+    projects: parseInt(stats.projects),
+    completed: parseInt(stats.completed),
+    clients: parseInt(stats.clients),
   });
 
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -36,20 +30,8 @@ export function About() {
     return () => observer.disconnect();
   }, [isVisible]);
 
-  // Initialize counts when stats are loaded
   useEffect(() => {
-    if (stats && counts === null) {
-      setCounts({
-        experience: parseInt(stats.experience),
-        projects: parseInt(stats.projects),
-        completed: parseInt(stats.completed),
-        clients: parseInt(stats.clients),
-      });
-    }
-  }, [stats, counts]);
-
-  useEffect(() => {
-    if (!isVisible || !stats || counts === null) return;
+    if (!isVisible) return;
 
     const duration = 2000;
     const steps = 60;
@@ -90,40 +72,7 @@ export function About() {
     }, stepDuration);
 
     return () => clearInterval(interval);
-  }, [isVisible, stats, counts]);
-
-  if (isLoading) {
-    return (
-      <section id="about" className="py-12 sm:py-16 lg:py-24 bg-background" data-testid="section-about">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4">About me</h2>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="text-center p-6">
-                <Skeleton className="w-12 h-12 mx-auto mb-4" />
-                <Skeleton className="h-12 w-24 mx-auto mb-2" />
-                <Skeleton className="h-4 w-32 mx-auto" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (error || !stats || counts === null) {
-    return (
-      <section id="about" className="py-12 sm:py-16 lg:py-24 bg-background" data-testid="section-about">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center">
-            <p className="text-sm sm:text-base text-muted-foreground">Failed to load stats.</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  }, [isVisible]);
 
   return (
     <section id="about" className="py-12 sm:py-16 lg:py-24 bg-background" data-testid="section-about" ref={sectionRef}>

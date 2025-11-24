@@ -1,8 +1,6 @@
 import { Shield, Code, Smartphone, Cpu } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useQuery } from "@tanstack/react-query";
-import type { Service } from "@shared/schema";
+import { services } from "@/data/staticData";
 
 const iconMap = {
   shield: <Shield className="w-12 h-12 text-red-500" />,
@@ -31,42 +29,6 @@ const colorMap: Record<string, { bg: string; border: string }> = {
 };
 
 export function Services() {
-  const { data: services, isLoading, error } = useQuery<Service[]>({
-    queryKey: ["/api/services"],
-  });
-
-  if (isLoading) {
-    return (
-      <section id="services" className="py-12 sm:py-16 lg:py-24 bg-background/50" data-testid="section-services">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold">Services</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <Card key={i} className="p-8">
-                <Skeleton className="w-12 h-12 mb-6" />
-                <Skeleton className="h-8 w-3/4 mb-4" />
-                <Skeleton className="h-24 w-full" />
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (error || !services) {
-    return (
-      <section id="services" className="py-12 sm:py-16 lg:py-24 bg-background/50" data-testid="section-services">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center">
-            <p className="text-sm sm:text-base text-muted-foreground">Failed to load services. Please try again later.</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="services" className="py-12 sm:py-16 lg:py-24 bg-background/50" data-testid="section-services">

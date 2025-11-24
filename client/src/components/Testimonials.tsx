@@ -1,61 +1,18 @@
 import { Card } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Star } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
-import type { Testimonial } from "@shared/schema";
+import { testimonials } from "@/data/staticData";
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const { data: testimonials, isLoading, error } = useQuery<Testimonial[]>({
-    queryKey: ["/api/testimonials"],
-  });
-
   useEffect(() => {
-    if (!testimonials || testimonials.length === 0) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [testimonials]);
-
-  if (isLoading) {
-    return (
-      <section id="testimonials" className="py-24 bg-background" data-testid="section-testimonials">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold">Testimonials and Feedback</h2>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8 lg:p-12">
-              <div className="flex flex-col md:flex-row gap-8">
-                <Skeleton className="w-20 h-20 rounded-full" />
-                <div className="flex-1 space-y-4">
-                  <Skeleton className="h-8 w-48" />
-                  <Skeleton className="h-32 w-full" />
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (error || !testimonials || testimonials.length === 0) {
-    return (
-      <section id="testimonials" className="py-24 bg-background" data-testid="section-testimonials">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center">
-            <p className="text-muted-foreground">Failed to load testimonials.</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  }, []);
 
   return (
     <section id="testimonials" className="py-24 bg-background" data-testid="section-testimonials">
