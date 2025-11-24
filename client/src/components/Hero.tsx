@@ -114,7 +114,7 @@ export function Hero() {
 
           {/* Right Column - Profile Image with Floating Icons */}
           <div className="relative w-full flex justify-center items-center lg:mt-0 mt-4 sm:mt-6">
-            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[2012px] lg:h-[1513px]">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[32rem] lg:h-[32rem]">
               {/* Profile Image */}
               <div className="relative w-full h-full">
                 <img
